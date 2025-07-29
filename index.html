@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gaurav Chaudhary | Android & Backend Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQQKXWxzWBuX+0xqxX1lmL7bl1PJ6I6q1JX1YibWgp+OXj0kM0xo5wlR21/LwPOQyU3m+1jG6v9CTe2q3O7EgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Poppins', sans-serif; background: #121212; color: #fff; line-height: 1.6; }
+    body { font-family: 'Poppins', sans-serif; background: #121212; color: #fff; line-height: 1.6; overflow-x: hidden; }
     header { padding: 60px 20px; text-align: center; background: #1e1e1e; }
     header h1 { font-size: 2.5rem; }
-    header p { margin-top: 10px; font-size: 1.2rem; color: #bbb; }
+    header p { margin-top: 10px; font-size: 1.1rem; color: #bbb; max-width: 800px; margin-left: auto; margin-right: auto; }
 
     .tech-scroll {
       overflow-x: auto;
@@ -21,21 +22,33 @@
       gap: 20px;
       padding: 20px;
       background: #181818;
+      scroll-padding: 10px;
     }
+    .tech-scroll::-webkit-scrollbar { height: 6px; }
+    .tech-scroll::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
     .tech-scroll img {
       height: 50px;
-      filter: brightness(0) invert(1);
+      width: auto;
+      background: #222;
+      padding: 10px;
+      border-radius: 8px;
     }
 
     .projects {
       padding: 40px 20px;
       background: #1a1a1a;
     }
-    .projects h2 { text-align: center; margin-bottom: 30px; }
+    .projects h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; }
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: 1fr;
       gap: 20px;
+    }
+    @media(min-width: 600px) {
+      .project-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media(min-width: 900px) {
+      .project-grid { grid-template-columns: repeat(3, 1fr); }
     }
     .card {
       background: #222;
@@ -45,7 +58,7 @@
       transition: transform 0.2s;
     }
     .card:hover { transform: translateY(-5px); }
-    .card h3 { margin-bottom: 10px; }
+    .card h3 { margin-bottom: 10px; font-size: 1.2rem; }
     .card p { font-size: 0.95rem; color: #ccc; }
     .card a { display: inline-block; margin-top: 10px; color: #00bcd4; text-decoration: none; }
 
@@ -54,7 +67,7 @@
       background: #111;
       text-align: center;
     }
-    .contact h2 { margin-bottom: 20px; }
+    .contact h2 { margin-bottom: 20px; font-size: 2rem; }
     .contact form {
       display: flex;
       flex-direction: column;
@@ -67,6 +80,8 @@
       border: none;
       border-radius: 8px;
       font-size: 1rem;
+      background: #222;
+      color: #fff;
     }
     .contact button {
       padding: 12px;
@@ -77,15 +92,21 @@
       font-weight: bold;
       cursor: pointer;
     }
+
     footer {
       text-align: center;
       padding: 30px 20px;
       background: #181818;
     }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
     .social-icons a {
-      margin: 0 10px;
       color: #bbb;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       transition: color 0.3s;
     }
     .social-icons a:hover { color: #00bcd4; }
@@ -93,8 +114,9 @@
 </head>
 <body>
   <header>
-    <h1>Hi, I'm Gaurav Chaudhary 👋</h1>
-    <p>I build powerful Android Apps & scalable Backends using Jetpack Compose, Kotlin, Node.js, Express, MongoDB</p>
+    <h1>👋 Hi, I'm Gaurav Chaudhary</h1>
+    <p>I build powerful Android Apps & scalable Backends using Jetpack Compose, Kotlin, Node.js, Express, MongoDB.</p>
+    <p>Offering affordable, high-quality Android and web solutions for startups, creators, and businesses.</p>
   </header>
 
   <section class="tech-scroll">
@@ -103,8 +125,8 @@
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
   </section>
 
   <section class="projects">
@@ -144,7 +166,7 @@
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
     </form>
   </section>
 
