@@ -3,39 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gaurav Chaudhary | Portfolio</title>
+  <title>Gaurav Chaudhary | Android & Web Developer</title>
   <style>
-    body { font-family: Arial; padding: 40px; background: #f5f5f5; }
-    h1 { color: #333; }
-    .section { margin-bottom: 40px; }
-    .project { background: white; padding: 20px; margin-top: 10px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    a { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px;
+      background: #f4f8fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      margin-bottom: 50px;
+    }
+    .hero {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .projects, .services {
+      display: grid;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    .contact a {
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .cta {
+      background: #007bff;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Hi, I'm Gaurav Chaudhary 👋</h1>
-  <p>Android & Backend Developer | Node.js | Jetpack Compose | MongoDB</p>
+  <div class="hero section">
+    <h1>Hi, I'm Gaurav Chaudhary 👋</h1>
+    <p>I’m an Android & Backend Developer specializing in modern, scalable apps using Jetpack Compose, Node.js, and MongoDB.</p>
+    <p>💼 I build high-quality Android apps and web backends at an affordable cost for startups, creators, and small businesses.</p>
+  </div>
 
   <div class="section">
     <h2>🚀 Projects</h2>
-    <div class="project">
-      <h3>Vidora - YouTube Clone</h3>
-      <p>Android app with video uploads, playback, likes, comments, and channels — connected to a custom Node.js + MongoDB backend.</p>
-      <a href="https://github.com/gaurav-chaudhary1/vidora">GitHub →</a>
-    </div>
-    <div class="project">
-      <h3>StoreX - App Store Alternative</h3>
-      <p>Upload and download Android apps via a custom backend with professional UI built using Compose and Hilt.</p>
-      <a href="https://github.com/gaurav-chaudhary1/storex">GitHub →</a>
+    <div class="projects">
+      <div class="card">
+        <h3><a href="https://github.com/Gaurav-Chaudhary1/Vidora-Android">Vidora</a></h3>
+        <p>YouTube-like video app with upload, playback, likes, comments, and subscriptions. Powered by Node.js & MongoDB.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/Gaurav-Chaudhary1/StoreX-Public">StoreX</a></h3>
+        <p>Play Store alternative where users can upload/download APKs, built with Jetpack Compose, Hilt, and custom backend.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/Gaurav-Chaudhary1/Bubble">Bubble</a></h3>
+        <p>Real-time chat app with group messaging and Firebase integration.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/Gaurav-Chaudhary1/News-App">News App</a></h3>
+        <p>Clean Android app using NewsAPI to show real-time news with categories and dark mode.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/Gaurav-Chaudhary1/WeatherPunch">WeatherPunch</a></h3>
+        <p>Minimal weather app showing live temperature, humidity, and forecast for your location.</p>
+      </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>📬 Contact Me</h2>
-    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+    <h2>💼 Services I Offer</h2>
+    <div class="services">
+      <div class="card">
+        <h3>📱 Android App Development</h3>
+        <p>Custom apps using Jetpack Compose, Kotlin, MVVM + Hilt. Clean architecture and professional UI/UX.</p>
+      </div>
+      <div class="card">
+        <h3>🕸️ Backend API & Dashboard</h3>
+        <p>Node.js + Express.js REST APIs with JWT auth, MongoDB, B2 cloud storage, and admin dashboards.</p>
+      </div>
+      <div class="card">
+        <h3>💲 Affordable Pricing</h3>
+        <p>Freelancer-friendly pricing for students, small businesses, and startups.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section cta">
+    <h2>💡 Need an App or Backend?</h2>
+    <p>Contact me today — I’d love to help you build your idea fast & professionally!</p>
+    <p>Email: <a style="color:white;" href="mailto:darkguru.dg000@gmail.com">darkguru.dg000@gmail.com</a></p>
+    <p>LinkedIn: <a style="color:white;" href="https://www.linkedin.com/in/gaurav-chaudhary-33787723b/">Connect with me</a></p>
   </div>
 
 </body>
