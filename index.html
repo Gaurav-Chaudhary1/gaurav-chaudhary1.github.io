@@ -7,116 +7,51 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQQKXWxzWBuX+0xqxX1lmL7bl1PJ6I6q1JX1YibWgp+OXj0kM0xo5wlR21/LwPOQyU3m+1jG6v9CTe2q3O7EgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Poppins', sans-serif; background: #121212; color: #fff; line-height: 1.6; }
-    header { padding: 60px 20px; text-align: center; background: #1e1e1e; }
-    header h1 { font-size: 2.5rem; }
-    header p { margin-top: 10px; font-size: 1.1rem; color: #bbb; max-width: 800px; margin: 0 auto; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html, body { width:100%; overflow-x:hidden; font-family:'Poppins',sans-serif; background:#121212; color:#fff; }
+    header { padding:4rem 1rem; text-align:center; background:#1e1e1e; }
+    header h1 { font-size:2.5rem; }
+    header p { margin-top:1rem; color:#bbb; max-width:700px; margin-inline:auto; }
 
     .tech-scroll {
-      overflow-x: auto;
-      display: flex;
-      gap: 20px;
-      padding: 20px;
-      background: #181818;
+      display:flex; overflow-x:auto; padding:1rem; gap:1rem;
     }
-    .tech-scroll::-webkit-scrollbar { height: 6px; }
-    .tech-scroll::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
+    .tech-scroll::-webkit-scrollbar { height:4px; }
+    .tech-scroll::-webkit-scrollbar-thumb { background:#555; border-radius:2px; }
     .tech-item {
-      flex: 0 0 auto;
-      background: #222;
-      padding: 10px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 70px;
-      height: 70px;
+      flex:0 0 auto; display:flex; align-items:center; justify-content:center; width:64px; height:64px;
+      background:#222; border-radius:8px; padding:0.5rem;
     }
-    .tech-item img {
-      height: 40px;
-      width: auto;
-    }
+    .tech-item img { max-width:100%; height:auto; }
 
-    .projects {
-      padding: 40px 20px;
-      background: #1a1a1a;
-    }
-    .projects h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; }
+    .projects { padding:2rem 1rem; background:#1a1a1a; }
+    .projects h2 { text-align:center; margin-bottom:1.5rem; }
     .project-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
+      display:grid; gap:1rem; grid-template-columns:1fr;
     }
-    @media(min-width: 600px) {
-      .project-grid { grid-template-columns: repeat(2, 1fr); }
+    @media(min-width:600px) { .project-grid { grid-template-columns:1fr 1fr; } }
+    @media(min-width:900px) { .project-grid { grid-template-columns:1fr 1fr 1fr; } }
+    .card { background:#222; padding:1rem; border-radius:8px; transition:transform 0.2s;
+      box-shadow:0 2px 8px rgba(0,0,0,0.3);
     }
-    @media(min-width: 900px) {
-      .project-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    .card {
-      background: #222;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
-    }
-    .card:hover { transform: translateY(-5px); }
-    .card h3 { margin-bottom: 10px; font-size: 1.2rem; }
-    .card p { font-size: 0.95rem; color: #ccc; }
-    .card a { display: inline-block; margin-top: 10px; color: #00bcd4; text-decoration: none; }
+    .card:hover { transform:translateY(-5px); }
+    .card h3 { font-size:1.1rem; margin-bottom:0.5rem; }
+    .card p { font-size:0.9rem; color:#ccc; }
+    .card a { color:#00bcd4; display:inline-block; margin-top:0.5rem; }
 
-    .contact {
-      padding: 40px 20px;
-      background: #111;
-      text-align: center;
-    }
-    .contact h2 { margin-bottom: 20px; font-size: 2rem; }
-    .contact form {
-      display: flex;
-      flex-direction: column;
-      max-width: 500px;
-      margin: 0 auto;
-      gap: 15px;
-    }
-    .contact input, .contact textarea {
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      background: #222;
-      color: #fff;
-    }
-    .contact button {
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      background: #00bcd4;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
+    .contact { padding:2rem 1rem; background:#111; text-align:center; }
+    .contact h2 { margin-bottom:1rem; }
+    .contact form { display:flex; flex-direction:column; gap:0.75rem; max-width:480px; margin-inline:auto; }
+    .contact input, .contact textarea { padding:0.75rem; border:none; border-radius:6px; background:#222; color:#fff; }
+    .contact button { padding:0.75rem; background:#00bcd4; color:#000; font-weight:600; border:none; border-radius:6px; cursor:pointer; }
 
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #181818;
-    }
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-    .social-icons a {
-      color: #bbb;
-      font-size: 2rem;
-      transition: color 0.3s;
-    }
-    .social-icons a:hover { color: #00bcd4; }
+    footer { background:#181818; padding:2rem 1rem; text-align:center; }
+    .social-icons { display:flex; justify-content:center; gap:1rem; }
+    .social-icons a { color:#bbb; font-size:1.75rem; }
+    .social-icons a:hover { color:#00bcd4; }
   </style>
 </head>
 <body>
@@ -127,13 +62,13 @@
   </header>
 
   <section class="tech-scroll">
-    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android"></div>
-    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin"></div>
-    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain.svg" alt="Android"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-plain.svg" alt="Kotlin"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" alt="Node.js"></div>
     <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express"></div>
-    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"></div>
-    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"></div>
-    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg" alt="MongoDB"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt="HTML5"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt="CSS3"></div>
   </section>
 
   <section class="projects">
@@ -178,7 +113,6 @@
   </section>
 
   <footer>
-    <p>Reach me on:</p>
     <div class="social-icons">
       <a href="mailto:darkguru.dg000@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
       <a href="https://www.linkedin.com/in/gaurav-chaudhary-33787723b/" target="_blank"><i class="fab fa-linkedin"></i></a>
