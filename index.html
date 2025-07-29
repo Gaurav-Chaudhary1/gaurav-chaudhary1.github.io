@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQQKXWxzWBuX+0xqxX1lmL7bl1PJ6I6q1JX1YibWgp+OXj0kM0xo5wlR21/LwPOQyU3m+1jG6v9CTe2q3O7EgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Poppins', sans-serif; background: #121212; color: #fff; line-height: 1.6; overflow-x: hidden; }
+    body { font-family: 'Poppins', sans-serif; background: #121212; color: #fff; line-height: 1.6; }
     header { padding: 60px 20px; text-align: center; background: #1e1e1e; }
     header h1 { font-size: 2.5rem; }
-    header p { margin-top: 10px; font-size: 1.1rem; color: #bbb; max-width: 800px; margin-left: auto; margin-right: auto; }
+    header p { margin-top: 10px; font-size: 1.1rem; color: #bbb; max-width: 800px; margin: 0 auto; }
 
     .tech-scroll {
       overflow-x: auto;
@@ -22,16 +22,23 @@
       gap: 20px;
       padding: 20px;
       background: #181818;
-      scroll-padding: 10px;
     }
     .tech-scroll::-webkit-scrollbar { height: 6px; }
     .tech-scroll::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
-    .tech-scroll img {
-      height: 50px;
-      width: auto;
+    .tech-item {
+      flex: 0 0 auto;
       background: #222;
       padding: 10px;
       border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 70px;
+    }
+    .tech-item img {
+      height: 40px;
+      width: auto;
     }
 
     .projects {
@@ -101,12 +108,12 @@
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
       flex-wrap: wrap;
     }
     .social-icons a {
       color: #bbb;
-      font-size: 1.8rem;
+      font-size: 2rem;
       transition: color 0.3s;
     }
     .social-icons a:hover { color: #00bcd4; }
@@ -120,13 +127,13 @@
   </header>
 
   <section class="tech-scroll">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"></div>
+    <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"></div>
   </section>
 
   <section class="projects">
@@ -174,7 +181,7 @@
     <p>Reach me on:</p>
     <div class="social-icons">
       <a href="mailto:darkguru.dg000@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-      <a href="www.linkedin.com/in/gaurav-c-33787723b" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/gaurav-chaudhary-33787723b/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://t.me/gaurav_android" target="_blank"><i class="fab fa-telegram"></i></a>
       <a href="https://github.com/Gaurav-Chaudhary1" target="_blank"><i class="fab fa-github"></i></a>
     </div>
